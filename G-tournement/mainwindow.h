@@ -3,9 +3,11 @@
 
 #include <QMainWindow>
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
+#include <QWidget>
+#include <QGridLayout>
+#include <QLabel>
+#include <QComboBox>
+#include <QPushButton>
 
 class MainWindow : public QMainWindow
 {
@@ -15,7 +17,23 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    // Generation des UIs
+    void UISelectFormat(void);
+    void UISelectGame(void);
+
 private:
-    Ui::MainWindow *ui;
+    // Global
+    QWidget     *m_centralWidget;
+    QGridLayout *m_MainLayout;
+
+    QPushButton *m_previous;
+    QPushButton *m_next;
+
+    // Select format
+    QComboBox   *m_modeList;
+
+    // Select Game
+    QComboBox   *m_gameList;
+
 };
 #endif // MAINWINDOW_H
