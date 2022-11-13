@@ -8,6 +8,7 @@
 #include <QLabel>
 #include <QComboBox>
 #include <QPushButton>
+#include "databasehandler.h"
 
 class MainWindow : public QMainWindow
 {
@@ -23,17 +24,18 @@ public:
 
 private:
     // Global
-    QWidget     *m_centralWidget;
-    QGridLayout *m_MainLayout;
+    QWidget         *m_centralWidget;
+    QGridLayout     *m_MainLayout;
+    DataBaseHandler *m_dbhandler;
 
     QPushButton *m_previous;
     QPushButton *m_next;
 
     // Select format
-    QComboBox   *m_modeList;
+    QComboBox *m_modeList;
 
     // Select Game
-    QComboBox   *m_gameList;
+    QComboBox *m_gameList;
 
 };
 #endif // MAINWINDOW_H

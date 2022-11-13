@@ -9,6 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     this->setWindowTitle(tr("Goult tournement"));
 
+    // Database
+    this->m_dbhandler = new DataBaseHandler;
+
     // Main wiget
     this->m_centralWidget = new QWidget();
     this->m_MainLayout = new QGridLayout();
